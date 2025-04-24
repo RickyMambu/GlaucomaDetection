@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+  <!-- Head -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -94,12 +95,19 @@
           <strong>Prediksi:</strong> {{ prediction }} <br />
           <strong>Keyakinan:</strong> {{ confidence }}
         </p>
+        <div class="text-secondary mt-4">
+          <strong>Deskripsi:</strong>
+          <div class="mt-2 prose prose-invert max-w-none">
+            {{ description | safe }}
+          </div>
+        </div>
         {% else %}
         <p id="result-text" class="text-secondary">
           Hasil analisis akan muncul di sini...
         </p>
         {% endif %}
       </div>
+      
     </section>
 
     <!-- Galeri Foto Glaukoma -->
